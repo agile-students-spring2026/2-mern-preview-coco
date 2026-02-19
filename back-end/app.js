@@ -78,5 +78,19 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about', (req, res) => {
+  res.json({
+    title: 'About Us',
+    name: 'Coco Ke',
+    subtitle: 'NYU Junior • Computer Science • Web Design Minor',
+    imageUrl: 'https://raw.githubusercontent.com/agile-students-spring2026/2-mern-preview-coco/97f383817ad9bf98f2e7bae9b279e3e150c675c4/front-end/public/me.JPG',
+    paragraphs: [
+      "Hi! I’m Coco Ke, a junior at NYU majoring in Computer Science and minoring in Web Design. I enjoy building full-stack web applications and learning how design and engineering work together.",
+      "I’m from Shenzhen, China — a beautiful coastal city in southern China near Hong Kong. Growing up there shaped my interest in technology and modern digital culture.",
+      "My hobbies include singing, playing violin, and playing video games. I’m totally an introvert, so I prefer staying at home doing what I enjoy rather than being surrounded by crowds."
+    ]
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
